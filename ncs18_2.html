@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ncs18 성적 처리 애플리케이션</title>
+    </head>
+    <body>
+        <script>
+            const scoresCalculator = [
+                { name: "min", korean: 70, english: 70, math: 65 },
+                { name: "zard", korean: 70, english: 85, math: 90 },
+                { name: "cdr", korean: 85, english: 80, math: 85 }
+            ];
+            // 합과 평균 계산
+            let sum = 0;
+            for (let i = 0; i < scoresCalculator.length; i++) {
+            const student = scoresCalculator[i];
+            const total = student.korean + student.english + student.math;
+            sum += total;
+            }
+            const average = sum / (scoresCalculator.length * 3);
+
+            // 결과 출력
+            console.log("전체 점수 합:", sum);
+            console.log("전체 점수 평균:", average.toFixed(2));
+        </script>
+    </body>
+</html>
